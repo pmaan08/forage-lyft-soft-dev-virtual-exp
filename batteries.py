@@ -10,7 +10,7 @@ class SpindlerBattery(Battery):
         self._last_service_date = last_service_date
 
     def needs_service(self):
-        service_threshold = 365 * 2  
+        service_threshold = 365 * 3 
         time_since_last_service = self._current_date - self._last_service_date 
         return time_since_last_service.days > service_threshold 
 
