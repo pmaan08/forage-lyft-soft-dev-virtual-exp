@@ -6,6 +6,7 @@ from datetime import date
 
 class CarFactory:
 
+    @classmethod
     def create_calliope(self, current_date: date, last_service_date: date,
                         current_mileage: int, last_service_mileage: int) -> Car:
         return Car(
@@ -13,6 +14,7 @@ class CarFactory:
             battery=SpindlerBattery(current_date, last_service_date)
         )
 
+    @classmethod
     def create_glissade(self, current_date: date, last_service_date: date,
                         current_mileage: int, last_service_mileage: int) -> Car:
         return Car(
@@ -20,6 +22,7 @@ class CarFactory:
             battery=SpindlerBattery(current_date, last_service_date)
         )
 
+    @classmethod
     def create_palindrome(self, current_date: date, last_service_date: date,
                           warning_light_on: bool) -> Car:
         return Car(
@@ -27,6 +30,7 @@ class CarFactory:
             battery=SpindlerBattery(current_date, last_service_date)
         )
 
+    @classmethod
     def create_rorschach(self, current_date: date, last_service_date: date,
                         current_mileage: int, last_service_mileage: int) -> Car:
         return Car(
@@ -34,6 +38,7 @@ class CarFactory:
             battery=NubbinBattery(current_date, last_service_date)
         )
 
+    @classmethod
     def create_thovex(self, current_date: date, last_service_date: date,
                       current_mileage: int, last_service_mileage: int) -> Car:
         return Car(
